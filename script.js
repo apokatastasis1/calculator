@@ -48,7 +48,7 @@ dot.addEventListener("click", (e)=>{
 numberButtons.forEach(button=> button.addEventListener("click", displayNumbers));
 
 operatorButtons.forEach(button => button.addEventListener('click',(e)=> {
-
+    wasEqualPressed = false;
     //when an operator is pressed the number on the screen is saved on displayValue, we are going to use it as our first operand.
     //if the screen was clearead it means that the first value has  already been saved 
     if(!wasScreenCleared) displayValue = +displayLowerScreen.textContent;
@@ -66,6 +66,8 @@ operatorButtons.forEach(button => button.addEventListener('click',(e)=> {
 
 equalBtn.addEventListener("click", ()=>{
     if(displayValue === null) return;
+    if(wasEqualPressed == true) return;
+    wasEqualPressed = true;
     secondOperator = +displayLowerScreen.textContent;
     result = operate(operationBackup, displayValue, secondOperator);
     printResult(operationBackup);
@@ -73,7 +75,7 @@ equalBtn.addEventListener("click", ()=>{
     displayValue = result;
     secondOperator = null;
     wasScreenCleared = false;
-    wasEqualPressed = true;
+    //wasEqualPressed = true;
     
 
 })
