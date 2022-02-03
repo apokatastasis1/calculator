@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -6,10 +9,14 @@
 }
 body{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: indianred;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+    color: honeydew;
 
 }
 
@@ -20,7 +27,9 @@ body{
     
     width: 96%;
     height: 90px;
-    border: 1px solid black;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: rgba(128, 128, 128, 0.466);
 }
 .bottom{
     
@@ -47,11 +56,13 @@ body{
     flex-direction: column;
     height: 78%;
     width: 28%;
-    border: 1px solid black;
+    
+    
     justify-content: center;
     align-items: center;
     padding: 15px 8px;
-    border-radius: 4px;
+    border-radius: 6px;
+    background-color: rgb(197, 196, 196);
 }
 
 .btn-container{
@@ -76,7 +87,10 @@ body{
 
 
 button{
-    aspect-ratio: 1;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 5px;
+    
 }
 
 .clear-container{

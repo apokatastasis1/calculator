@@ -155,7 +155,7 @@ function clearScreen(){
 
 
 function displayNumbers(e){
-    
+    if(displayLowerScreen.textContent.length>13) return;
     
     //to handle the initial 0 value on screen.
     if (!wasUsed) displayLowerScreen.textContent = "";
