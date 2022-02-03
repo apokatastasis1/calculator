@@ -20,11 +20,29 @@ const operatorButtons = document.querySelectorAll(".operator");
 const equalBtn = document.querySelector(".equalsBtn");
 const clearBtn = document.querySelector(".clear");
 const dot = document.querySelector(".dot");
+const deleteBtn = document.querySelector(".delete");
+
+
+
+deleteBtn.addEventListener("click", ()=>{
+    
+    if(displayLowerScreen.textContent===0) return;
+
+    let number = displayLowerScreen.textContent;
+    displayLowerScreen.textContent = number.substring(0, number.length-1);
+  
+    
+})
 
 
 
 
-
+dot.addEventListener("click", (e)=>{
+    
+    if(displayLowerScreen.textContent.includes(".")) return;
+    displayLowerScreen.textContent += e.target.value; 
+    wasUsed = true;
+})
 
 
 numberButtons.forEach(button=> button.addEventListener("click", displayNumbers));
@@ -134,12 +152,7 @@ function clearScreen(){
     
 }
 
-dot.addEventListener("click", (e)=>{
-    
-    if(displayLowerScreen.textContent.includes(".")) return;
-    displayLowerScreen.textContent += e.target.value; 
-    wasUsed = true;
-})
+
 
 function displayNumbers(e){
     
